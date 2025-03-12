@@ -73,7 +73,7 @@ Requirements:
     
     response = chain.invoke({"code":code,"beats":beats,"runtime":runtime})
 
-    response,complement = parse_response(respone)
+    response,complement = parse_response(response)
     st.code(response)
     st.write(complement)
 def parse_response(response):
