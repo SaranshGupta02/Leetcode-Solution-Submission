@@ -75,7 +75,25 @@ Requirements:
 
     response,complement = parse_response(response)
     st.code(response)
-    st.write(complement)
+    st.markdown(
+    f"""
+    <div style="
+        padding: 10px; 
+        border-radius: 8px; 
+        background-color: #f0f2f6; 
+        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        border: 1px solid #ddd;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    ">
+        {complement}
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 def parse_response(response):
     lines = response.split("\n")
     response1 = ""
