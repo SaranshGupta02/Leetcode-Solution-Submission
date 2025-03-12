@@ -75,8 +75,7 @@ Requirements:
 
     response,complement = parse_response(response)
     st.code(response)
-
-    st.write(f"## {complement}")
+    st.write(complement)
 def parse_response(response):
     lines = response.split("\n")
     response1 = ""
