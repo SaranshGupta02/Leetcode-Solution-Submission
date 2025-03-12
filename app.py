@@ -23,7 +23,7 @@ beats=0
 runtime=0
 # Input code
 code = st.text_area(f"🔹 Enter {language.upper()} Code", height=200)
-beats = st.number_input("Enter beats:", min_value=0, max_value=300,value=None)
+beats = st.number_input("Enter Beats(%):", min_value=0, max_value=300,value=None)
 
 # Optional numeric input for runtime
 runtime = st.number_input("Enter runtime(ms):", min_value=0, max_value=1000, value=None, format="%d")
