@@ -52,7 +52,8 @@ def generate_response(llm,code):
 Requirements:
 - Fill all the necessary field like Approach,Complexity as per the code given and return the response in the same latex format
 - Add some Emojis/Latex Designing etc to improve the Submission Aesthetics
-- Also provide Title for the submission 
+- Also provide Title for the submission . The Title is visible to Peoples before opening the solution So Title should be catchy, innovate , may be funny
+- Title Should tell people about our code like Its Complexity,Concepts used etc.
 """
     output_parser = StrOutputParser()
     prompt=ChatPromptTemplate.from_messages([
