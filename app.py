@@ -26,7 +26,7 @@ code = st.text_area(f"🔹 Enter {language.upper()} Code", height=200)
 # Display formatted code and remove input area
 if code:
     st.code(code, language=language)
-    st.write("✅ Code displayed above. You can now remove the input.")
+    
 
 def generate_response(llm,code):
     template="""You have an immense knowledge of Data Structure and Algorithm . You solve all your DSA problems on leetcode.com . You have solved 3000+ problems in DSA
