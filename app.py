@@ -83,12 +83,14 @@ def parse_response(response):
     
     for line in lines:
         if line.strip().startswith("Complement"):
-            complement = line.strip()[len("Complement:"):]  # Fixed slicing
-            complement = complement.strip("[]")
+            complement = line.strip()[len("Complement:"):].strip()
+            if complement.startswith("[") and complement.endswith("]"):
+                complement = complement[1:-1]  # Remove first and last character
         else:
-            response1 += line + "\n"  # Added newline for formatting
+            response1 += line + "\n"
     
-    return response1.strip(), complement 
+    return response1.strip(), complement  # Remove extra whitespace
+
 # Submit button
 if st.button("Generate Solution🚀"):
     if code:
