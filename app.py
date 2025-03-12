@@ -84,6 +84,8 @@ def parse_response(response):
     for line in lines:
         if line.strip().startswith("Complement"):
             complement = line.strip()[len("Complement:"):].strip()
+            if complement.startswith(":"):
+                complement = complement[1:]
             if complement.startswith("[") and complement.endswith("]"):
                 complement = complement[1:-1]  # Remove first and last character
         else:
