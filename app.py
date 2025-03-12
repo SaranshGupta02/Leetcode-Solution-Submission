@@ -61,6 +61,8 @@ Requirements:
 - Mention about the Beats and Runtime in Title or Approach but dont Explicitly mention beats and runtime
 - Also provide Title for the submission . The Title is visible to Peoples before opening the solution So Title should be catchy, innovate , may be funny but i should be short
 - Title Should tell people about our code like Its Complexity,Concepts used etc.
+- at last Give a single line Funny/Roasting Complement to the user about the code/coding/leetcode/Dsa Competetion etc. motivating the user to solve more problem
+- Remember the Complement should be either Funny/Roasting it should not be serious and complement should be in proper format : Complement : [Complement]
 """
     output_parser = StrOutputParser()
     prompt=ChatPromptTemplate.from_messages([
