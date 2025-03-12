@@ -75,11 +75,8 @@ Requirements:
 
     response,complement = parse_response(response)
     st.code(response)
-    st.success(complement)  # Green box (success message)
-    st.warning(complement)  # Yellow box (warning)
-    st.error(complement)    # Red box (error message)
-    st.info(complement) 
 
+    st.write(f"## {complement}")
 def parse_response(response):
     lines = response.split("\n")
     response1 = ""
