@@ -72,7 +72,23 @@ Requirements:
     chain= prompt | llm | output_parser
     
     response = chain.invoke({"code":code,"beats":beats,"runtime":runtime})
+
+    response,complement = parse_response(respone)
     st.code(response)
+    st.write(complement)
+def parse_response(response):
+    lines = response.split("\n")
+    response1 = ""
+    complement = ""
+    
+    for line in lines:
+        if line.strip().startswith("Complement"):
+            complement = line.strip()[len("Complement:"):]  # Fixed slicing
+            complement = complement.strip("[]")
+        else:
+            response1 += line + "\n"  # Added newline for formatting
+    
+    return response1.strip(), complement 
 # Submit button
 if st.button("Generate Solution🚀"):
     if code:
